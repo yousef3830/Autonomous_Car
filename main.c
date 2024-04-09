@@ -11,6 +11,7 @@
 
 int main(void)
 {
+	int x = 0;
 	
 	SET_BIT(DDRB,3);
 	Timer0_CTC_INIT();
