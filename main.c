@@ -11,11 +11,9 @@
 
 int main(void)
 {
-	int x = 0;
 	
-	SET_BIT(DDRB,3);
-	Timer0_CTC_INIT();
-	
+	Timer0_FASTPWM_INIT();
+    Timer0_SetDC(0.3);
 	
     /* Replace with your application code */
     while (1) 

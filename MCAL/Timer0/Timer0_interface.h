@@ -11,7 +11,7 @@
 
 void Timer0_Normal_INIT();
 void Timer0_CTC_INIT();
-
-
+void Timer0_FASTPWM_INIT();
+void Timer0_SetDC(float DutyCycle);
 
 #endif /* TIMER0_INTERFACE_H_ */

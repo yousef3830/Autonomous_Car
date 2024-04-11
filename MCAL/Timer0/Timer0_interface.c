@@ -49,6 +49,36 @@ void Timer0_CTC_INIT(){
 }
 
 
+void Timer0_FASTPWM_INIT(){
+	
+	SET_BIT(TCCR0,WGM00);          //fast PWM mode
+	SET_BIT(TCCR0,WGM01);
+	
+	CLR_BIT(TCCR0,COM00);         //non inverting mode
+	SET_BIT(TCCR0,COM01);
+	
+	CLR_BIT(TCCR0,CS00);          // clock select 
+	CLR_BIT(TCCR0,CS01);
+	SET_BIT(TCCR0,CS02);
+	
+	SET_BIT(DDRB,3);             // make OC0 output
+	
+	OCR0=0;
+}
+
+void Timer0_SetDC(float DutyCycle){
+	
+	if (DutyCycle==0){
+		OCR0=0;
+	}
+	
+	else {
+	
+	OCR0=(unsigned char)(256.0*DutyCycle-1.0);
+	}
+	
+}
+
 
 ISR(TIMER0_OVF_vect){
 	counter +=1;
