@@ -81,14 +81,9 @@ void Timer0_SetDC(float DutyCycle){
 
 
 ISR(TIMER0_OVF_vect){
+	
 	counter +=1;
 	
-	if(counter == 16){
-		counter = 0;
-		TCNT0 = 190;
-		
-		TOG_BIT(PORTB,7);
-	}
 }
 
 
@@ -100,6 +95,5 @@ ISR(TIMER0_COMP_vect){
 		
 		TOG_BIT(PORTB,7);
 	}
-    
-	
+  
 }
