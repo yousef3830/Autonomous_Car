@@ -34,14 +34,20 @@ LINKER_SCRIPT_DEP:=
 # Every subdirectory with source files must be described here
 SUBDIRS :=  \
 ../HAL \
-../MCAL \
-../LIB \
-../MCAL/Timer0
+../HAL/DCMotor_Driver \
+../LIB/ \
+../MCAL/ \
+../MCAL/ICU/ \
+../MCAL/INT0/ \
+../MCAL/Timer0/
 
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
+../HAL/DCMotor_Driver/DCMotor_Driver_Interface.c \
 ../main.c \
+../MCAL/ICU/ICU_Interface.c \
+../MCAL/INT0/INT0_interface.c \
 ../MCAL/Timer0/Timer0_interface.c
 
 
@@ -52,19 +58,31 @@ ASM_SRCS +=
 
 
 OBJS +=  \
+HAL/DCMotor_Driver/DCMotor_Driver_Interface.o \
 main.o \
+MCAL/ICU/ICU_Interface.o \
+MCAL/INT0/INT0_interface.o \
 MCAL/Timer0/Timer0_interface.o
 
 OBJS_AS_ARGS +=  \
+HAL/DCMotor_Driver/DCMotor_Driver_Interface.o \
 main.o \
+MCAL/ICU/ICU_Interface.o \
+MCAL/INT0/INT0_interface.o \
 MCAL/Timer0/Timer0_interface.o
 
 C_DEPS +=  \
+HAL/DCMotor_Driver/DCMotor_Driver_Interface.d \
 main.d \
+MCAL/ICU/ICU_Interface.d \
+MCAL/INT0/INT0_interface.d \
 MCAL/Timer0/Timer0_interface.d
 
 C_DEPS_AS_ARGS +=  \
+HAL/DCMotor_Driver/DCMotor_Driver_Interface.d \
 main.d \
+MCAL/ICU/ICU_Interface.d \
+MCAL/INT0/INT0_interface.d \
 MCAL/Timer0/Timer0_interface.d
 
 OUTPUT_FILE_PATH +=ATmega32_Drivers.elf
@@ -81,7 +99,28 @@ LINKER_SCRIPT_DEP+=
 
 
 # AVR32/GNU C Compiler
+HAL/DCMotor_Driver/DCMotor_Driver_Interface.o: ../HAL/DCMotor_Driver/DCMotor_Driver_Interface.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
 ./main.o: .././main.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+MCAL/ICU/ICU_Interface.o: ../MCAL/ICU/ICU_Interface.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+MCAL/INT0/INT0_interface.o: ../MCAL/INT0/INT0_interface.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
 	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 

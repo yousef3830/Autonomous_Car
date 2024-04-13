@@ -9,6 +9,7 @@
 #include "../../LIB/STD_Macros.h"
 #include "../INT0/INT0_interface.h"
 #include "../Timer0/Timer0_interface.h"
+#include "ICU_Config.h"
 
 
 void ICU_INIT(){

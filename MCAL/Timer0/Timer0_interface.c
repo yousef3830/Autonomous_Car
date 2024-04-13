@@ -1,4 +1,4 @@
-#include "Timer0_private.h"
+#include "Timer0_interface.h"
 #include "../../LIB/STD_Macros.h"
 #include <avr/interrupt.h>
 

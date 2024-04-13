@@ -120,6 +120,18 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="HAL\DCMotor_Driver\DCMotor_Driver_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\DCMotor_Driver\DCMotor_Driver_Interface.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\DCMotor_Driver\DCMotor_Driver_Interface.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\DCMotor_Driver\DCMotor_Driver_private.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="LIB\STD_Macros.h">
       <SubType>compile</SubType>
     </Compile>
@@ -162,11 +174,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="HAL" />
-    <Folder Include="MCAL" />
-    <Folder Include="LIB" />
-    <Folder Include="MCAL\INT0" />
-    <Folder Include="MCAL\ICU" />
-    <Folder Include="MCAL\Timer0" />
+    <Folder Include="HAL\DCMotor_Driver" />
+    <Folder Include="LIB\" />
+    <Folder Include="MCAL\" />
+    <Folder Include="MCAL\ICU\" />
+    <Folder Include="MCAL\INT0\" />
+    <Folder Include="MCAL\Timer0\" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
 </Project>

@@ -8,6 +8,7 @@
 
 #ifndef TIMER0_INTERFACE_H_
 #define TIMER0_INTERFACE_H_
+#include "Timer0_private.h"
 
 void Timer0_Normal_INIT();
 void Timer0_CTC_INIT();
