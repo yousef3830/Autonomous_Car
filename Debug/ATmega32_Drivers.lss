@@ -83,21 +83,9 @@ Disassembly of section .text:
   78:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
 
 0000007c <main>:
-
-
-#include "LIB/STD_Macros.h"
-
-int main(void)
-{
   7c:	ff cf       	rjmp	.-2      	; 0x7c <main>
 
 0000007e <__vector_11>:
-
-void SetCounter(int count){
-	counter = count;	
-}
-
-ISR(TIMER0_OVF_vect){
   7e:	1f 92       	push	r1
   80:	0f 92       	push	r0
   82:	0f b6       	in	r0, 0x3f	; 63
@@ -105,15 +93,11 @@ ISR(TIMER0_OVF_vect){
   86:	11 24       	eor	r1, r1
   88:	8f 93       	push	r24
   8a:	9f 93       	push	r25
-	
-	counter +=1;
   8c:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
   90:	90 91 61 00 	lds	r25, 0x0061	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
   94:	01 96       	adiw	r24, 0x01	; 1
   96:	90 93 61 00 	sts	0x0061, r25	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
   9a:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__DATA_REGION_ORIGIN__>
-	
-}
   9e:	9f 91       	pop	r25
   a0:	8f 91       	pop	r24
   a2:	0f 90       	pop	r0
@@ -123,9 +107,6 @@ ISR(TIMER0_OVF_vect){
   aa:	18 95       	reti
 
 000000ac <__vector_10>:
-
-
-ISR(TIMER0_COMP_vect){
   ac:	1f 92       	push	r1
   ae:	0f 92       	push	r0
   b0:	0f b6       	in	r0, 0x3f	; 63
@@ -133,27 +114,19 @@ ISR(TIMER0_COMP_vect){
   b4:	11 24       	eor	r1, r1
   b6:	8f 93       	push	r24
   b8:	9f 93       	push	r25
-	counter+=1;
   ba:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
   be:	90 91 61 00 	lds	r25, 0x0061	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
   c2:	01 96       	adiw	r24, 0x01	; 1
   c4:	90 93 61 00 	sts	0x0061, r25	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
   c8:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__DATA_REGION_ORIGIN__>
-	
-	if(counter==125){
   cc:	8d 37       	cpi	r24, 0x7D	; 125
   ce:	91 05       	cpc	r25, r1
   d0:	39 f4       	brne	.+14     	; 0xe0 <__vector_10+0x34>
-		counter=0;
   d2:	10 92 61 00 	sts	0x0061, r1	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
   d6:	10 92 60 00 	sts	0x0060, r1	; 0x800060 <__DATA_REGION_ORIGIN__>
-		
-		TOG_BIT(PORTB,7);
   da:	88 b3       	in	r24, 0x18	; 24
   dc:	80 58       	subi	r24, 0x80	; 128
   de:	88 bb       	out	0x18, r24	; 24
-	}
-  
   e0:	9f 91       	pop	r25
   e2:	8f 91       	pop	r24
   e4:	0f 90       	pop	r0

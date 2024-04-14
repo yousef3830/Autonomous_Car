@@ -24,8 +24,10 @@ c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/..
                               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3x.o) (__fp_split3)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_zero.o)
                               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3x.o) (__fp_zero)
+c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(gesf2.o)
+                              HAL/Servo/Servo_interface.o (__gtsf2)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3.o)
-                              MCAL/Timer0/Timer0_interface.o (__mulsf3)
+                              HAL/Servo/Servo_interface.o (__mulsf3)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
                               c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3.o) (__mulsf3x)
 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodsi4.o)
@@ -60,9 +62,28 @@ Discarded input sections
                 0x00000000       0x48 HAL/DCMotor_Driver/DCMotor_Driver_Interface.o
  .debug_ranges  0x00000000       0x38 HAL/DCMotor_Driver/DCMotor_Driver_Interface.o
  .debug_line    0x00000000      0x13e HAL/DCMotor_Driver/DCMotor_Driver_Interface.o
- .debug_str     0x00000000      0x153 HAL/DCMotor_Driver/DCMotor_Driver_Interface.o
+ .debug_str     0x00000000      0x173 HAL/DCMotor_Driver/DCMotor_Driver_Interface.o
  .comment       0x00000000       0x31 HAL/DCMotor_Driver/DCMotor_Driver_Interface.o
  .debug_frame   0x00000000       0x74 HAL/DCMotor_Driver/DCMotor_Driver_Interface.o
+ .text          0x00000000        0x0 HAL/Servo/Servo_interface.o
+ .data          0x00000000        0x0 HAL/Servo/Servo_interface.o
+ .bss           0x00000000        0x0 HAL/Servo/Servo_interface.o
+ .text.Servo_Home
+                0x00000000        0xe HAL/Servo/Servo_interface.o
+ .text.Servo_INIT
+                0x00000000        0xa HAL/Servo/Servo_interface.o
+ .text.Servo_Angle
+                0x00000000       0x7e HAL/Servo/Servo_interface.o
+ .debug_info    0x00000000      0x10d HAL/Servo/Servo_interface.o
+ .debug_abbrev  0x00000000       0xc8 HAL/Servo/Servo_interface.o
+ .debug_loc     0x00000000       0xc1 HAL/Servo/Servo_interface.o
+ .debug_aranges
+                0x00000000       0x30 HAL/Servo/Servo_interface.o
+ .debug_ranges  0x00000000       0x20 HAL/Servo/Servo_interface.o
+ .debug_line    0x00000000       0xdb HAL/Servo/Servo_interface.o
+ .debug_str     0x00000000      0x164 HAL/Servo/Servo_interface.o
+ .comment       0x00000000       0x31 HAL/Servo/Servo_interface.o
+ .debug_frame   0x00000000       0x58 HAL/Servo/Servo_interface.o
  .text          0x00000000        0x0 HAL/Ultrasonic/Ultrasonic_interface.o
  .data          0x00000000        0x0 HAL/Ultrasonic/Ultrasonic_interface.o
  .bss           0x00000000        0x0 HAL/Ultrasonic/Ultrasonic_interface.o
@@ -194,6 +215,11 @@ Discarded input sections
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_zero.o)
  .text.avr-libc.fplib
                 0x00000000        0xe c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_zero.o)
+ .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(gesf2.o)
+ .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(gesf2.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(gesf2.o)
+ .text.avr-libc.fplib
+                0x00000000        0xa c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(gesf2.o)
  .text          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3.o)
  .data          0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3.o)
@@ -269,6 +295,7 @@ Linker script and memory map
 
 LOAD C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
 LOAD HAL/DCMotor_Driver/DCMotor_Driver_Interface.o
+LOAD HAL/Servo/Servo_interface.o
 LOAD HAL/Ultrasonic/Ultrasonic_interface.o
 LOAD main.o
 LOAD MCAL/ICU/ICU_Interface.o

@@ -132,6 +132,18 @@
     <Compile Include="HAL\DCMotor_Driver\DCMotor_Driver_private.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="HAL\Servo\Servo_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\Servo\Servo_interface.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\Servo\Servo_interface.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\Servo\Servo_private.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="HAL\Ultrasonic\Ultrasonic_config.h">
       <SubType>compile</SubType>
     </Compile>
@@ -190,6 +202,7 @@
   <ItemGroup>
     <Folder Include="HAL" />
     <Folder Include="HAL\DCMotor_Driver" />
+    <Folder Include="HAL\Servo" />
     <Folder Include="HAL\Ultrasonic" />
     <Folder Include="LIB\" />
     <Folder Include="MCAL\" />
