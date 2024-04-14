@@ -9,11 +9,7 @@
 #ifndef ICU_CONFIG_H_
 #define ICU_CONFIG_H_
 
-unsigned char stage=0;
-unsigned long Thigh=0;
-unsigned long Ttotal=0;
-unsigned long freq=0;
-unsigned long dutyCycle=0;
+
 #define systemFreq 1000000
 #define prescaler 256
 

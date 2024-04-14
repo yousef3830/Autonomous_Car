@@ -14,6 +14,8 @@
 
 void ICU_INIT(){
 	
+	Thigh = 0;
+	Ttotal = 0;
 	INT0_INIT();
 	
 	
