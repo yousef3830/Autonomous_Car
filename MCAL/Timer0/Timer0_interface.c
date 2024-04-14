@@ -1,11 +1,11 @@
 #include "Timer0_interface.h"
 #include "../../LIB/STD_Macros.h"
 #include <avr/interrupt.h>
-
-
+#include "Timer0_config.h"
+#include "Timer0_private.h"
 #define F_CPU 16000000ul
 
-int counter = 0;
+
 
 void Timer0_Normal_INIT(){
 	
@@ -79,6 +79,13 @@ void Timer0_SetDC(float DutyCycle){
 	
 }
 
+int GetCounter(){
+	return counter;
+}
+
+void SetCounter(int count){
+	counter = count;	
+}
 
 ISR(TIMER0_OVF_vect){
 	

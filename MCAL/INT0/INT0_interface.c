@@ -1,8 +1,7 @@
  
 #include "../../LIB/STD_Macros.h"
-#include <avr/interrupt.h>
 #include "INT0_interface.h"
-#include "INT0_config.h"
+#include <avr/interrupt.h>
 
 
 void INT0_INIT(){

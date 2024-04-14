@@ -11,9 +11,11 @@
 
 #define TRIG_DDR DDRA
 #define TRIG_NUM 5
+#define TRIG_PORT PORTA
 
-#define ECHO_DDR DDRA
-#define ECHO_NUM 5
+
+#define ECHO_DDR DDRD
+#define ECHO_NUM 2
 
 
 

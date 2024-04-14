@@ -1,13 +1,19 @@
 /*
- * ICU_Private.h
+ * ICU_private.h
  *
- * Created: 4/11/2024 11:19:27 PM
- *  Author: User
+ * Created: 4/14/2024 10:25:39 AM
+ *  Author: youse
  */ 
 
 
 #ifndef ICU_PRIVATE_H_
 #define ICU_PRIVATE_H_
+
+unsigned char stage=0;
+unsigned long Thigh=0;
+unsigned long Ttotal=0;
+unsigned long freq=0;
+unsigned long dutyCycle=0;
 
 
 

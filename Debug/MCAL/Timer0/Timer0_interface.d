@@ -1,6 +1,6 @@
 MCAL/Timer0/Timer0_interface.d MCAL/Timer0/Timer0_interface.o: \
  ../MCAL/Timer0/Timer0_interface.c ../MCAL/Timer0/Timer0_interface.h \
- ../MCAL/Timer0/Timer0_private.h ../MCAL/Timer0/../../LIB/STD_Macros.h \
+ ../MCAL/Timer0/../../LIB/STD_Macros.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\interrupt.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\io.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\sfr_defs.h \
@@ -12,11 +12,10 @@ MCAL/Timer0/Timer0_interface.d MCAL/Timer0/Timer0_interface.o: \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\common.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\version.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\fuse.h \
- c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h \
+ ../MCAL/Timer0/Timer0_config.h ../MCAL/Timer0/Timer0_private.h
 
 ../MCAL/Timer0/Timer0_interface.h:
-
-../MCAL/Timer0/Timer0_private.h:
 
 ../MCAL/Timer0/../../LIB/STD_Macros.h:
 
@@ -43,3 +42,7 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\fuse.h:
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\avr\lock.h:
+
+../MCAL/Timer0/Timer0_config.h:
+
+../MCAL/Timer0/Timer0_private.h:

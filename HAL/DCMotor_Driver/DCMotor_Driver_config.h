@@ -10,7 +10,7 @@
 #ifndef DCMOTOR_DRIVER_CONFIG_H_
 #define DCMOTOR_DRIVER_CONFIG_H_
 
-#include "DCMotor_Driver_private.h"
+
 
 #define IN1_DDR DDRB
 #define IN1_PORT PORTB

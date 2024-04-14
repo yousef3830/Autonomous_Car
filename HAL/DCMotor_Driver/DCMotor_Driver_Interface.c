@@ -7,7 +7,8 @@
 
 #include "../../LIB/STD_Macros.h"
 #include "DCMotor_Driver_Interface.h"
-
+#include "DCMotor_Driver_private.h"
+#include "DCMotor_Driver_config.h"
 
 void DCMotor_INIT(){
 	

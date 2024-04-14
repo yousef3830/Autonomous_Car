@@ -10,7 +10,7 @@
 
 #ifndef DCMOTOR_DRIVER_INTERFACE_H_
 #define DCMOTOR_DRIVER_INTERFACE_H_
-#include "DCMotor_Driver_config.h"
+
 
 void DCMotor_INIT();
 void DCMotor_Forward();

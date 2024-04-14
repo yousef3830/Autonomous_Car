@@ -132,6 +132,18 @@
     <Compile Include="HAL\DCMotor_Driver\DCMotor_Driver_private.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="HAL\Ultrasonic\Ultrasonic_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\Ultrasonic\Ultrasonic_interface.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\Ultrasonic\Ultrasonic_interface.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\Ultrasonic\Ultrasonic_private.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="LIB\STD_Macros.h">
       <SubType>compile</SubType>
     </Compile>
@@ -145,6 +157,9 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="MCAL\ICU\ICU_Interface.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\ICU\ICU_private.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="MCAL\INT0\INT0_config.h">
@@ -175,10 +190,11 @@
   <ItemGroup>
     <Folder Include="HAL" />
     <Folder Include="HAL\DCMotor_Driver" />
+    <Folder Include="HAL\Ultrasonic" />
     <Folder Include="LIB\" />
     <Folder Include="MCAL\" />
-    <Folder Include="MCAL\ICU\" />
     <Folder Include="MCAL\INT0\" />
+    <Folder Include="MCAL\ICU" />
     <Folder Include="MCAL\Timer0\" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />

@@ -5,15 +5,13 @@
  * Author : youse
  */ 
 
-#include <avr/io.h>
-#include "MCAL/Timer0/Timer0_interface.h"
+
 #include "LIB/STD_Macros.h"
 
 int main(void)
 {
 	
-	Timer0_FASTPWM_INIT();
-    Timer0_SetDC(0.3);
+	
 	
     /* Replace with your application code */
     while (1) 

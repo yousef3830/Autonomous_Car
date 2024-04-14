@@ -9,8 +9,10 @@
 #include "../../LIB/STD_Macros.h"
 #include "../INT0/INT0_interface.h"
 #include "../Timer0/Timer0_interface.h"
+#include "ICU_Interface.h"
 #include "ICU_Config.h"
-
+#include "ICU_private.h"
+#include <avr/io.h>
 
 void ICU_INIT(){
 	
@@ -19,6 +21,10 @@ void ICU_INIT(){
 	INT0_INIT();
 	
 	
+}
+
+unsigned long GetHighTime(){
+	return Thigh;
 }
 
 ISR(INT0_vect){
@@ -33,7 +39,7 @@ ISR(INT0_vect){
 	}
 	
 	else if(stage==1){
-		Thigh=(counter*256)+TCNT0;
+		Thigh=(GetCounter()*256)+TCNT0;
 		
 		SET_BIT(MCUCR,ISC00);             // make interrupt in raising edge
 		SET_BIT(MCUCR,ISC01);
@@ -43,7 +49,7 @@ ISR(INT0_vect){
 	}
   else if (stage==2){
 	  
-	  Ttotal=(counter*256)+TCNT0;
+	  Ttotal=(GetCounter()*256)+TCNT0;
 	  
 	   CLR_BIT(TCCR0,CS00);			// timer off
 	   CLR_BIT(TCCR0,CS01);
@@ -53,7 +59,7 @@ ISR(INT0_vect){
 	   
 	  stage=0;
 	  TCNT0=0;
-	  counter=0;
+	  SetCounter(0);
 	  
 	  freq=systemFreq/(Ttotal*prescaler);
 	  dutyCycle=Thigh/Ttotal;

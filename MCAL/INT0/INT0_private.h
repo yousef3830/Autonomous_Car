@@ -9,6 +9,11 @@
 #ifndef INT0_PRIVATE_H_
 #define INT0_PRIVATE_H_
 
+#define INT0 6
+#define ISC00 0
+#define ISC01 1
+
+
 #define MCUCR *((volatile unsigned char*)0x55)
 #define MCUCSR *((volatile unsigned char*)0x54)
 #define GICR *((volatile unsigned char*)0x5B)
